@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Asistencia RFID | Colegio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>Asistencia RFID</h1>
+            <p>Sistema de control escolar</p>
+        </div>
+
+        <span class="status">
+            ● Sistema activo
+        </span>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Panel de control</h2>
+            <p>Administración y seguimiento de asistencia.</p>
+        </section>
+
+        <section class="stats">
+
+            <article class="stat-card">
+                <span>Alumnos registrados</span>
+                <h2 id="total-alumnos">0</h2>
+            </article>
+
+            <article class="stat-card">
+                <span>Presentes hoy</span>
+                <h2 id="total-presentes">0</h2>
+            </article>
+
+            <article class="stat-card">
+                <span>Ausentes</span>
+                <h2 id="total-ausentes">0</h2>
+            </article>
+
+        </section>
+
+        <section class="attendance">
+
+            <div class="section-header">
+                <div>
+                    <h2>Registro de asistencia</h2>
+                    <p>Últimos ingresos registrados</p>
+                </div>
+
+                <span id="fecha-actual"></span>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Alumno</th>
+                            <th>Curso</th>
+                            <th>UID RFID</th>
+                            <th>Horario</th>
+                        </tr>
+
+                          <tbody id="tabla-asistencia">
+
+                          </tbody>
+                    </thead>
+
+                    <tbody id="tabla-asistencia">
+                        <tr>
+                            <td colspan="4" class="empty">
+                                Esperando registros...
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Proyecto de Robótica | Control de Acceso RFID</p>
+        <p>Colegio Mano Amiga Santa María</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+    <script type="module" src="firebase.js"></script>
+
+</body>
+</html>
